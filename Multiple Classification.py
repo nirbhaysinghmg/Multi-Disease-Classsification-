@@ -139,8 +139,6 @@ if(selected == 'Heart Disease Prediction'):
 
     st.success(heart_diagnosis)
     
-if(selected == 'Breast Cancer Prediction'):
-    st.title('Breast Cancer Prediction using ML')
     
     col1, col2, col3 = st.columns(3)
     
