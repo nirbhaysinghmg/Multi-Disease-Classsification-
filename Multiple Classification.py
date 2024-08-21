@@ -15,8 +15,8 @@ from streamlit_option_menu import option_menu
 with open('C:/Users/Nirbhay Singh/OneDrive/Desktop/ML Project Disease Classification/diabetesPred.sav', 'rb') as file:
     diabetes_model = pickle.load(file, encoding='latin1')
 
-with open('C:/Users/Nirbhay Singh/OneDrive/Desktop/ML Project Disease Classification/breast_cancer_model.sav', 'rb') as file:
-    breast_model = pickle.load(file, encoding='latin1')
+#with open('C:/Users/Nirbhay Singh/OneDrive/Desktop/ML Project Disease Classification/breast_cancer_model.sav', 'rb') as file:
+    #breast_model = pickle.load(file, encoding='latin1')
     
 with open('C:/Users/Nirbhay Singh/OneDrive/Desktop/ML Project Disease Classification/heart_disease_model.sav', 'rb') as file:
     heart_disease = pickle.load(file, encoding='latin1')
@@ -24,7 +24,6 @@ with open('C:/Users/Nirbhay Singh/OneDrive/Desktop/ML Project Disease Classifica
 with st.sidebar:
     selected = option_menu('Multiple Disease Classification Using Machine Learning',
                            ['Diabetes Prediction',
-                            'Breast Cancer Prediction',
                             'Heart Disease Prediction'],
                            default_index=0)
     
@@ -139,7 +138,6 @@ if(selected == 'Heart Disease Prediction'):
 
     st.success(heart_diagnosis)
     
-    
-    col1, col2, col3 = st.columns(3)
+
     
     
